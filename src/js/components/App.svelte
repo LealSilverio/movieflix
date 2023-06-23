@@ -2,7 +2,7 @@
   import Login from './Login.svelte';
   import { userStore } from '../../lib/stores.mjs';
   import { checkLogin } from '../../lib/supabaseClient.mjs';
-    import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
 
   // When the page loads, check if user is logged in. 
   async function init() {
