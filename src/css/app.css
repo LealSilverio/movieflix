@@ -5,8 +5,8 @@
 :root {
     --red: rgb(220, 30, 40);
     --black: rgb(25, 25, 25);
-    --darkblue: rgb(40, 80, 130)
-    --lightblue: rgb(160, 190, 230)
+    --darkblue: rgb(40, 80, 130);
+    --lightblue: rgb(160, 190, 230);
     --white: #ffffff;
 }
 
