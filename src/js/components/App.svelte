@@ -7,8 +7,8 @@
   import { checkLogin } from '../../lib/supabaseClient.mjs';
   import { onMount } from 'svelte';
   import Navbar from './Navbar.svelte';
-  import MovieDetails from './MovieDetails.svelte';
-  import MyMovieList from './MyMovieList.svelte';
+  import UserProofile from './UserProfile.svelte';
+  import UserProfile from './UserProfile.svelte';
 
   // When the page loads, check if user is logged in. 
   async function init() {
@@ -44,10 +44,8 @@
     <h2>Home</h2>
     {:else if $route == "#login"}
     <Login />
-    {:else if $route == "#myMovies"}
-    <MyMovieList />
-    {:else if $route == "#genres"}
-    <Genres />
+    {:else if $route == "#profile"}
+    <UserProfile />
     {/if}
   </div>
   <!-- the movieId parameter is from the URL, like this: #details?id=movieId 
