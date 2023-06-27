@@ -1,4 +1,5 @@
 <script>
+  import Header from './Header.svelte';
   import Login from './Login.svelte';
   import { userStore } from '../../lib/stores.mjs';
   import { checkLogin } from '../../lib/supabaseClient.mjs';
@@ -13,6 +14,9 @@
   onMount(init);
 </script>
 
+<header>
+  <Header />
+</header>
 <main>
   <h1>MovieFlix</h1>
 
