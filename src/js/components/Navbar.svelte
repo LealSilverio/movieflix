@@ -5,11 +5,7 @@
 <nav>
     <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#profile">Profile</a></li>
-        {#if $userStore.isLoggedIn}
-        <li><a href="#home">Logout</a></li>
-        {:else}
-        <li><a href="#login">Login</a></li>
-        {/if}
+        <li><a href="#myMovies">My Movie List</a></li>
+        <li><a href="#genres">Genres</a></li>
     </ul>
 </nav>

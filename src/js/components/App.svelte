@@ -1,12 +1,14 @@
 <script>
+  import Genres from './Genres.svelte';
   import Header from './Header.svelte';
   import Login from './Login.svelte';
   import { userStore, route } from '../../lib/stores.mjs';
   import { checkLogin } from '../../lib/supabaseClient.mjs';
   import { onMount } from 'svelte';
   import Navbar from './Navbar.svelte';
-  import UserProofile from './UserProfile.svelte';
-  import UserProfile from './UserProfile.svelte';
+  import UserProofile from './MyMovieList.svelte';
+  import UserProfile from './MyMovieList.svelte';
+  import MyMovieList from './MyMovieList.svelte';
 
   // When the page loads, check if user is logged in. 
   async function init() {
@@ -33,8 +35,10 @@
     <p>Home</p>
     {:else if $route == "#login"}
     <Login />
-    {:else if $route == "#profile"}
-    <UserProfile />
+    {:else if $route == "#myMovies"}
+    <MyMovieList />
+    {:else if $route == "#genres"}
+    <Genres />
     {/if}
   </div>
 </main>
