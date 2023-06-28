@@ -1,13 +1,16 @@
 <script>
     import Navbar from './Navbar.svelte';
     import { userStore } from '../../lib/stores.mjs';
+    import Search from './Search.svelte';
 </script>
 
 <main class="header-main">
     <div class="logo">
         <a href="../../index.html"><img src="../../../placeholder-image.png" alt="movieflix logo" width="150"/></a>
     </div>
-    <div class="search-bar"></div>
+    <div class="search-bar">
+        <Search />
+    </div>
     <div class="login-button">
         {#if $userStore.isLoggedIn}
         <li><a href="#home">Logout</a></li>
