@@ -29,6 +29,7 @@
 <header>
   <Header />
 </header>
+
 <main>
   <h1>MovieFlix</h1>
 
@@ -43,15 +44,11 @@
     <Genres />
     {/if}
   </div>
-  <MovieDetails movieId={movieId}/>
+  <!-- the movieId parameter is from the URL, like this: #details?id=movieId 
+  The route is #details and the parameter is id=movieId-->
+  <!-- <MovieDetails movieId={movieId}/> -->
 </main>
 
 <footer>
   <Footer />
 </footer>
-
-<style>
-  header, main, footer {
-    margin: 0 3em 0 3em;
-  }
-</style>

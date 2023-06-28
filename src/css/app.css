@@ -1,24 +1,110 @@
+/* Import heading font (same as logo font) */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 /* Variables */
 
-/* Colors */
 :root {
+    /* Colors */
     --red: rgb(220, 30, 40);
     --black: rgb(25, 25, 25);
     --darkblue: rgb(40, 80, 130);
     --lightblue: rgb(160, 190, 230);
-    --white: #ffffff;
+
+    /* Fonts */
+    --headings: "Bebas Neue", "Calibri", sans-serif;
+    --body: "Calibri", sans-serif;
+    --body-size: 16px;
 }
 
-/* Other variables */
+/* For all views */
 
+h1, h2, h3, h4, h5, h6, header {
+    font-family: var(--headings);
+}
+
+body {
+    font-family: var(--body);
+    font-size: var(--body-size);
+    margin: 0 3em;
+}
 
 
 /* Header, navigation, search, footer */
 
+header, nav, .search, footer {
+    background-color: var(--black);
+}
+
+footer {
+    color: white;
+    padding: 30px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--black);
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    grid-column: 1/2;
+    justify-self: center;
+}
+
+.search-bar {
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center; 
+}
+
+.search {
+
+}
+
+.login-button {
+    grid-column: 3/4;
+    justify-self: center;
+    align-self: center; 
+}
+
+.login-button li {
+    list-style: none;
+}
+
+.login-button li a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 20%;
+    background-color: var(--red);
+}
+
+nav {
+    grid-column: span 3;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar li a {
+    font-size: 1.4rem;
+}
 
 
-/* Home page */
+/* Home/Genres page */
 
 
 
