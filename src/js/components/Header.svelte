@@ -6,7 +6,7 @@
 
 <main class="header-main">
     <div class="logo">
-        <a href="../../index.html"><img src="../../../placeholder-image.png" alt="movieflix logo" width="150"/></a>
+        <a href="../../index.html"><img src="/images/logo.svg" alt="movieflix logo" width="150"/></a>
     </div>
     <div class="search-bar">
         <Search />
