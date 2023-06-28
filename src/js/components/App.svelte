@@ -43,3 +43,9 @@
 <footer>
   <Footer />
 </footer>
+
+<style>
+  header, main, footer {
+    margin: 0 3em 0 3em;
+  }
+</style>
