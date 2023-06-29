@@ -2,6 +2,7 @@
     import Navbar from './Navbar.svelte';
     import { userStore } from '../../lib/stores.mjs';
     import Search from './Search.svelte';
+    import { logout } from '../../lib/supabaseClient.mjs';
 </script>
 
 <main class="header-main">
@@ -13,7 +14,7 @@
     </div>
     <div class="login-button">
         {#if $userStore.isLoggedIn}
-        <li><a href="#home">Logout</a></li>
+        <li><a href="#home" on:click={logout}>Logout</a></li>
         {:else}
         <li><a href="#login">Login</a></li>
         {/if}
