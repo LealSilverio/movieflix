@@ -39,3 +39,26 @@ export async function checkLogin() {
         userStore.set({ isLoggedIn: false, user: null });
     }
 }
+
+export async function logout() {
+    let {error} = await supabase.auth.signOut();
+    if (!error) userStore.set({ isLoggedIn: false, user: null });
+} 
+
+export async function getUserProfile(userId) {
+    let {data: profiles, error} = await supabase
+    .from('profiles')
+    .select("*")
+    .eq("id", userId)
+    .single()
+    return profiles;
+}
+
+export async function  setUserProfile(profile, userId) {
+    const {data, error} = await supabase
+    .from('profile')
+    .update(profile)
+    .eq('id', userId)
+    .select()
+    return error
+}

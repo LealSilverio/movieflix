@@ -2,6 +2,7 @@
     import Navbar from './Navbar.svelte';
     import { userStore } from '../../lib/stores.mjs';
     import Search from './Search.svelte';
+    import { logout } from '../../lib/supabaseClient.mjs';
 </script>
 
 <div class="logo">
