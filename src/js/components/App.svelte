@@ -16,13 +16,19 @@
   }
 
   window.addEventListener('popstate', () => {
-    console.log(window.location.hash);
-    $route = window.location.hash;
+    if (document.location.hash == "#profile" && !$userStore.isLoggedIn) {
+      document.location.hash = "#login"
+    } else $route = document.location.hash
     // getParameters function 
   })
 
-  let movieId;
+  // window.onpopstate = function (event) {
+  //   if (document.location.hash == #profile && !$userStore.isLoggedIn) {
+  //     document.location.hash
+  //   } else $route = document.location.hash;
+  // };
 
+  let movieId;
   onMount(init);
 </script>
 
