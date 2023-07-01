@@ -29,7 +29,7 @@
 
 
 <div id="signup">
-<h1>SignUp Page</h1>
+<h1>SignUp Form</h1>
     <form on:submit|preventDefault={handleSignup}>
     <div>
         <label for="name">Name</label>
@@ -44,7 +44,7 @@
         <input id="password" name="password" type="password" bind:value={password} required />
     </div>
     <div>
-        <button type="button" disabled={loading}>
+        <button on:click={handleSignup} type="button" disabled={loading} id="signupButton">
             <span>{"Signup"}</span>
         </button>
     </div>
@@ -56,17 +56,25 @@
 
 <style>
     #signup{
-        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    label, input{
-        margin: 10px 0px;
-    }
+    label, input {
+    display: block;
+    margin: 0px auto;
+  }
 
-    label{
-        font-size: 1.2em;
-        margin-right: 8px;
-    } 
+  label{
+    margin-left: 20px;
+  }
+  input {
+    padding: 5px;
+    margin: 0px 20px;
+    margin-bottom: 20px;
+  }
 
     input{
         padding: 5px;
@@ -75,9 +83,10 @@
     button{
         display: block;
         margin: 10px auto;
-        padding: 20px 80px;
-        background-color: orangered;
+        padding: 10px 50px;
+        background-color: blue;
         color: white;
+        font-size: 1.2em;
         border-radius: 10px;
     }
 </style>
