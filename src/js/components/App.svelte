@@ -7,7 +7,6 @@
   import { checkLogin } from '../../lib/supabaseClient.mjs';
   import { onMount } from 'svelte';
   import Navbar from './Navbar.svelte';
-  import UserProofile from './UserProfile.svelte';
   import UserProfile from './UserProfile.svelte';
 
   // When the page loads, check if user is logged in. 
