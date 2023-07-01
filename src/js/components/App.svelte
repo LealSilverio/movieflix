@@ -8,6 +8,7 @@
   import { onMount } from 'svelte';
   import Navbar from './Navbar.svelte';
   import UserProfile from './UserProfile.svelte';
+  import SignUp from './SignUp.svelte';
 
   // When the page loads, check if user is logged in. 
   async function init() {
@@ -42,7 +43,7 @@
     {#if $route == "#home"}
     <h2>Home</h2>
     {:else if $route == "#login"}
-    <Login />
+    <SignUp />
     {:else if $route == "#profile"}
     <UserProfile />
     {/if}
