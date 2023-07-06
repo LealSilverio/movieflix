@@ -3,7 +3,8 @@
   import Header from './Header.svelte';
   import Footer from './Footer.svelte';
   import Login from './Login.svelte';
-  import { userStore, route } from '../../lib/stores.mjs';
+  import MovieCard from './MovieCard.svelte';
+  import { userStore, route, searchResults } from '../../lib/stores.mjs';
   import { checkLogin } from '../../lib/supabaseClient.mjs';
   import { onMount } from 'svelte';
   import Navbar from './Navbar.svelte';
@@ -53,6 +54,10 @@
     <Genres />
     {/if}
   </div>
+  
+  {#each $searchResults as movie}
+    <MovieCard {movie}/>
+  {/each}
   <!-- the movieId parameter is from the URL, like this: #details?id=movieId 
   The route is #details and the parameter is id=movieId-->
   <!-- <MovieDetails movieId={movieId}/> -->
