@@ -8,6 +8,7 @@
   import { onMount } from 'svelte';
   import Navbar from './Navbar.svelte';
   import MovieDetails from './MovieDetails.svelte';
+  import SignUp from './SignUp.svelte';
   import MyMovieList from './MyMovieList.svelte';
 
   // When the page loads, check if user is logged in. 
@@ -44,10 +45,10 @@
     <h2>Home</h2>
     {:else if $route == "#login"}
     <Login />
-    {:else if $route == "#myMovies"}
+    {:else if $route == "#profile"}
     <MyMovieList />
-    {:else if $route == "#genres"}
-    <Genres />
+    {:else if $route == "#signup"}
+    <SignUp />
     {/if}
   </div>
   <!-- the movieId parameter is from the URL, like this: #details?id=movieId 
