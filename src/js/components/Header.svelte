@@ -3,6 +3,7 @@
     import { userStore } from '../../lib/stores.mjs';
     import Search from './Search.svelte';
     import { logout } from '../../lib/supabaseClient.mjs';
+    import Genres from './Genres.svelte';
 </script>
 
 <div class="logo">
@@ -13,7 +14,7 @@
 </div>
 <div class="login-button">
     {#if $userStore.isLoggedIn}
-    <li><a href="#home">Logout</a></li>
+    <li><a href="#home" on:click={logout}>Logout</a></li>
     {:else}
     <li><a href="#login">Login</a></li>
     {/if}
