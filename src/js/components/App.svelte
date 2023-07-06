@@ -49,6 +49,8 @@
     <MyMovieList />
     {:else if $route == "#signup"}
     <SignUp />
+    {:else if $route == "#genres"}
+    <Genres />
     {/if}
   </div>
   <!-- the movieId parameter is from the URL, like this: #details?id=movieId 
