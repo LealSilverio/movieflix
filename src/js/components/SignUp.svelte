@@ -28,65 +28,26 @@
 </script>
 
 
-<div id="signup">
-<h1>SignUp Form</h1>
-    <form on:submit|preventDefault={handleSignup}>
-    <div>
-        <label for="name">Name</label>
-        <input id="name" name="name" bind:value={name} required/>
-    </div>
-    <div>
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" bind:value={email} required/>
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password" bind:value={password} required />
-    </div>
-    <div>
-        <button on:click={handleSignup} type="button" disabled={loading} id="signupButton">
-            <span>{"Signup"}</span>
-        </button>
-    </div>
-    {#if errorMessage}
-    <p>{errorMessage}</p>
-    {/if}
-    </form>
+<h1 class="signup-title">Signup Form</h1>
+<form on:submit|preventDefault={handleSignup}>
+<div>
+    <label for="name">Name</label>
+    <input id="name" name="name" bind:value={name} required/>
 </div>
-
-<style>
-    #signup{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    label, input {
-    display: block;
-    margin: 0px auto;
-  }
-
-  label{
-    margin-left: 20px;
-  }
-  input {
-    padding: 5px;
-    margin: 0px 20px;
-    margin-bottom: 20px;
-  }
-
-    input{
-        padding: 5px;
-    }
-
-    button{
-        display: block;
-        margin: 10px auto;
-        padding: 10px 50px;
-        background-color: blue;
-        color: white;
-        font-size: 1.2em;
-        border-radius: 10px;
-    }
-</style>
+<div>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" bind:value={email} required/>
+</div>
+<div>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" bind:value={password} required />
+</div>
+<div>
+    <button on:click={handleSignup} type="button" disabled={loading} class="signupButton">
+        <span>{"SIGNUP"}</span>
+    </button>
+</div>
+{#if errorMessage}
+<p>{errorMessage}</p>
+{/if}
+</form>

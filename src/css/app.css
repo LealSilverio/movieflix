@@ -25,9 +25,11 @@ h1, h2, h3, h4, h5, h6, header {
 body {
     font-family: var(--body);
     font-size: var(--body-size);
-    margin: 0 3em;
 }
 
+main {
+    margin: 0 25%;
+}
 
 /* Header, navigation, search, footer */
 
@@ -38,12 +40,14 @@ header, nav, .search, footer {
 footer {
     color: white;
     padding: 30px;
+    margin: 20px 0 0 0;
 }
 
 header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--black);
+    margin: 0;
 }
 
 header a {
@@ -66,6 +70,14 @@ header a {
 
 }
 
+.search button {
+    border: none;
+    padding: 5px 10px;
+    margin: 0;
+    background-color: lightgray;
+    color: black;
+}
+
 .login-button {
     grid-column: 3/4;
     justify-self: center;
@@ -80,12 +92,13 @@ header a {
     padding: 15px;
     text-decoration: none;
     font-size: 1.5rem;
-    border-radius: 20%;
+    border-radius: 15px;
     background-color: var(--red);
 }
 
 nav {
     grid-column: span 3;
+    margin: 0;
 }
 
 .navbar {
@@ -103,12 +116,55 @@ nav {
     font-size: 1.4rem;
 }
 
+/* All forms */
+
+form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin: 0 auto 0 20px;
+    text-align: left;
+}
+
+input {
+    padding: 5px;
+    margin: 0 20px 20px 20px;
+}
+
+/* Buttons */
+
+button {
+    border: none;
+    font-family: var(--headings);
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    color: white;
+    background-color: var(--red);
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+.signupButton {
+    background-color: var(--darkblue);
+}
+
+/* Login, signup */
+
+.login-title, .signup-title {
+    text-align: center;
+}
 
 /* Home/Genres page */
 
-
-
-/* Login, signup */
 
 
 
@@ -116,6 +172,12 @@ nav {
 
 
 
+
 /* MyMovies page */
+
+
+
+
+/* MovieCard (search results) */
 
 
