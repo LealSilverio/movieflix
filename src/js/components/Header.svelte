@@ -1,9 +1,7 @@
 <script>
-    import Navbar from './Navbar.svelte';
     import { userStore } from '../../lib/stores.mjs';
     import Search from './Search.svelte';
     import { logout } from '../../lib/supabaseClient.mjs';
-    import Genres from './Genres.svelte';
 </script>
 
 <div class="logo">
@@ -19,4 +17,3 @@
     <li><a href="#login">Login</a></li>
     {/if}
 </div>
-<Navbar />

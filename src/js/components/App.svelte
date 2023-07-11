@@ -1,13 +1,12 @@
 <script>
-  import Genres from './Genres.svelte';
+  import Navbar from './Navbar.svelte';
   import Header from './Header.svelte';
   import Footer from './Footer.svelte';
   import Login from './Login.svelte';
   import MovieCard from './MovieCard.svelte';
-  import { userStore, route, searchResults } from '../../lib/stores.mjs';
+  import { userStore, route, searchResults, genreResults } from '../../lib/stores.mjs';
   import { checkLogin } from '../../lib/supabaseClient.mjs';
   import { onMount } from 'svelte';
-  import Navbar from './Navbar.svelte';
   import MovieDetails from './MovieDetails.svelte';
   import Signup from './Signup.svelte';
   import MyMovieList from './MyMovieList.svelte';
@@ -32,11 +31,13 @@
 
   let movieId;
   onMount(init);
+
 </script>
 
 <header>
   <Header />
 </header>
+<Navbar />
 
 <main>
   <h1>MovieFlix</h1>
@@ -46,18 +47,21 @@
     <h2>Home</h2>
     {:else if $route == "#login"}
     <Login />
-    {:else if $route == "#profile"}
+    {:else if $route == "#myMovies"}
     <MyMovieList />
     {:else if $route == "#signup"}
     <Signup />
     {:else if $route == "#genres"}
-    <Genres />
+      {#each $genreResults as movie}
+        <MovieCard {movie} />
+      {/each}
     {/if}
   </div>
   
   {#each $searchResults as movie}
     <MovieCard {movie}/>
   {/each}
+
   <!-- the movieId parameter is from the URL, like this: #details?id=movieId 
   The route is #details and the parameter is id=movieId-->
   <!-- <MovieDetails movieId={movieId}/> -->

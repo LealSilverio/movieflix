@@ -27,14 +27,12 @@
 
 </script>
 
-<h2>Genres</h2>
-
-<ul class="genres">
+<div class="genres">
     {#await promise}
         Loading...
     {:then genres} 
         {#each genres as genre}
-        <GenreName {genre} />
+        <GenreName {genre}/>
         {/each}
     {/await}
-</ul>
+</div>
