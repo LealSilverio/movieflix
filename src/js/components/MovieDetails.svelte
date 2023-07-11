@@ -1,3 +1,6 @@
 <script>
-    export let movieId;
+import MovieCard from "./MovieCard.svelte";
+
+// export let movieId;
+MovieCard
 </script>

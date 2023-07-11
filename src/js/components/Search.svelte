@@ -4,6 +4,9 @@ import { searchResults } from "../../lib/stores.mjs";
 let userInput;
 
 async function getData() {
+    console.log(userInput); 
+    if (userInput != null)
+    {
     const options = {
     method: 'GET',
     headers: {
@@ -15,7 +18,9 @@ async function getData() {
     .then(response => response.json())
     .then(response => $searchResults = response.results)
     .catch(err => console.error(err));
+    }
 }
+
 
 </script>
 

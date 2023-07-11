@@ -3,12 +3,13 @@
   import Header from './Header.svelte';
   import Footer from './Footer.svelte';
   import Login from './Login.svelte';
+  import Home from './Home.svelte';
   import MovieCard from './MovieCard.svelte';
   import { userStore, route, searchResults, genreResults } from '../../lib/stores.mjs';
   import { checkLogin } from '../../lib/supabaseClient.mjs';
   import { onMount } from 'svelte';
   import MovieDetails from './MovieDetails.svelte';
-  import Signup from './Signup.svelte';
+  import Signup from './signup.svelte';
   import MyMovieList from './MyMovieList.svelte';
 
   // When the page loads, check if user is logged in. 
@@ -44,7 +45,7 @@
 
   <div class="card">
     {#if $route == "#home"}
-    <h2>Home</h2>
+    <Home />
     {:else if $route == "#login"}
     <Login />
     {:else if $route == "#myMovies"}
@@ -52,9 +53,11 @@
     {:else if $route == "#signup"}
     <Signup />
     {:else if $route == "#genres"}
-      {#each $genreResults as movie}
-        <MovieCard {movie} />
-      {/each}
+    {#each $genreResults as movie}
+    <MovieCard {movie} />
+    {/each}
+    {:else if $route == "#movieDetails"}
+    <MovieDetails />
     {/if}
   </div>
   
