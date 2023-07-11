@@ -2,8 +2,7 @@
   import MovieDetails from "./MovieDetails.svelte";
 
 export let movie;
-console.log(movie)
-
+console.log(movie);
 var imageURL = `https://image.tmdb.org/t/p/original${movie.poster_path}`
 </script>
 

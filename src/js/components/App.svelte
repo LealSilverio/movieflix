@@ -3,6 +3,7 @@
   import Header from './Header.svelte';
   import Footer from './Footer.svelte';
   import Login from './Login.svelte';
+  import Home from './Home.svelte';
   import MovieCard from './MovieCard.svelte';
   import { userStore, route, searchResults } from '../../lib/stores.mjs';
   import { checkLogin } from '../../lib/supabaseClient.mjs';
@@ -43,7 +44,7 @@
 
   <div class="card">
     {#if $route == "#home"}
-    <h2>Home</h2>
+    <Home />
     {:else if $route == "#login"}
     <Login />
     {:else if $route == "#profile"}
