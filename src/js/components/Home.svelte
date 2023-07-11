@@ -32,6 +32,7 @@
     <p class="home-moto">Great movies with everything you need!</p>
 </div>
 
+<h2>Our Top Ten Popular Movies</h2>
 {#each popularMovies as movie}
     <MovieCard {movie}/>
 {/each}

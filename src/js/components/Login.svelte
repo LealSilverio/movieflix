@@ -1,5 +1,10 @@
 <script>
-  import { login, signup } from "../../lib/supabaseClient.mjs";
+  import { login, signup, checkLogin } from "../../lib/supabaseClient.mjs";
+  import { userStore, route, searchResults } from '../../lib/stores.mjs';
+
+  async function init() {
+    await checkLogin();
+  }
 
   let email = "";
   let password = "";
@@ -23,6 +28,12 @@
       // When we finish, stop "loading" message
       loading = false;
     }
+  }
+
+  init();
+
+  if ($userStore.isLoggedIn) {
+    alert('You are logged in!');
   }
 </script>
 
