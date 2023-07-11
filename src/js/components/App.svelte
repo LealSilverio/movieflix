@@ -9,7 +9,7 @@
   import { checkLogin } from '../../lib/supabaseClient.mjs';
   import { onMount } from 'svelte';
   import MovieDetails from './MovieDetails.svelte';
-  import Signup from './signup.svelte';
+  import SignUp from './SignUp.svelte';
   import MyMovieList from './MyMovieList.svelte';
 
   // When the page loads, check if user is logged in. 
@@ -51,7 +51,7 @@
     {:else if $route == "#myMovies"}
     <MyMovieList />
     {:else if $route == "#signup"}
-    <Signup />
+    <SignUp />
     {:else if $route == "#genres"}
     {#each $genreResults as movie}
     <MovieCard {movie} />
