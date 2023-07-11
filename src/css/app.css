@@ -46,8 +46,7 @@ footer {
 
 header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: var(--black);
+    grid-template-columns: auto auto auto;
     margin: 0;
 }
 
@@ -67,7 +66,7 @@ header a {
     align-self: center; 
 }
 
-.search-button {
+#search-button {
     border: none;
     padding: 5px 10px;
     margin: 0;
@@ -95,22 +94,41 @@ header a {
 
 nav {
     grid-column: span 3;
-    margin: 0;
 }
 
 .navbar {
+    margin: 0;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
 }
 
 .navbar li {
     list-style: none;
+    font-family: var(--headings);
 }
 
 .navbar li a {
     font-size: 1.4rem;
+    color: white;
+    text-decoration: none;
+}
+
+.genres {
+    background-color: var(--black);
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 200px;
+    margin: 0 0 0 auto;
+}
+
+.genres a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
 }
 
 /* All forms */
@@ -160,7 +178,7 @@ button a {
     text-align: center;
 }
 
-/* Home/Genres page */
+/* Home page */
 
 .home-grid {
     display: grid;
@@ -210,3 +228,30 @@ button a {
 }
 
 
+
+
+/* Small view adjustments */
+@media screen and (max-width: 650px) {
+    header {
+        grid-template-columns: auto auto;
+    }
+    .logo {
+        margin: 0 20px;
+        grid-column: 1/2;
+    }
+    .search-bar {
+        grid-column: 1/2;
+    }
+    .login-button {
+        margin: 20px 0;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+}
+
+/* Very-large view adjustment for genres popup */
+@media screen and (min-width: 1400px) {
+    .genres {
+        margin: 0 100px 0 auto;
+    }
+}

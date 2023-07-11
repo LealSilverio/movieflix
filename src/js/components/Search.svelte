@@ -1,5 +1,4 @@
 <script>
-import MovieCard from "./MovieCard.svelte";
 import { searchResults } from "../../lib/stores.mjs";
 
 let userInput;
