@@ -179,6 +179,10 @@ button a {
     align-self: center;
 }
 
+.top-ten-header {
+    font-size: 2em;
+    text-align: center;
+}
 
 /* MovieDetails page */
 

@@ -32,7 +32,7 @@
     <p class="home-moto">Great movies with everything you need!</p>
 </div>
 
-<h2>Our Top Ten Popular Movies</h2>
+<h3 class="top-ten-header">Our Top Ten Popular Movies</h3>
 {#each popularMovies as movie}
     <MovieCard {movie}/>
 {/each}
