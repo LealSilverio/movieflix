@@ -1,6 +1,6 @@
 <script>
 export let movie;
-console.log(movie)
+// console.log(movie)
 </script>
 
 <div>
