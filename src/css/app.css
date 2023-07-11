@@ -165,7 +165,22 @@ button a {
 
 /* Home/Genres page */
 
+.home-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
 
+.home-image {
+    width: 400px;
+}
+
+.home-moto {
+    font-size: 3em;
+    font-family: var(--headings);
+    margin: 0;
+    padding: 0 10px 0 10px;
+    align-self: center;
+}
 
 
 /* MovieDetails page */
