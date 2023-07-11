@@ -9,7 +9,7 @@
   import { onMount } from 'svelte';
   import Navbar from './Navbar.svelte';
   import MovieDetails from './MovieDetails.svelte';
-  import Signup from './Signup.svelte';
+  import SignUp from './SignUp.svelte';
   import MyMovieList from './MyMovieList.svelte';
 
   // When the page loads, check if user is logged in. 
@@ -46,10 +46,10 @@
     <h2>Home</h2>
     {:else if $route == "#login"}
     <Login />
-    {:else if $route == "#profile"}
+    {:else if $route == "#myMovies"}
     <MyMovieList />
     {:else if $route == "#signup"}
-    <Signup />
+    <SignUp />
     {:else if $route == "#genres"}
     <Genres />
     {/if}
