@@ -71,7 +71,7 @@ header a {
     padding: 5px 10px;
     margin: 0;
     background-color: lightgray;
-    color: black;
+    color: var(--black);
 }
 
 .login-button {
@@ -107,28 +107,39 @@ nav {
 .navbar li {
     list-style: none;
     font-family: var(--headings);
+    font-size: 1.4rem;
 }
 
 .navbar li a {
-    font-size: 1.4rem;
     color: white;
     text-decoration: none;
 }
 
+#genre-menu:hover .genres {
+    display: flex;
+}
+
+/* #genre-menu:hover {
+    padding-bottom: 100px;
+} */
+
 .genres {
+    font-family: var(--body);
     background-color: var(--black);
+    color: white;
+    position: absolute;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    display: none;
     padding: 20px;
-    width: 200px;
-    margin: 0 0 0 auto;
 }
 
 .genres a {
-    padding: 10px;
+    padding: 5px;
     color: white;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 /* All forms */
@@ -250,6 +261,13 @@ button a {
         margin: 20px 0;
         grid-column: 2/3;
         grid-row: 1/2;
+    }
+
+    .genres {
+        top: 230px;
+    }
+    #genre-menu:hover {
+        padding-bottom: 120px;
     }
 }
 
