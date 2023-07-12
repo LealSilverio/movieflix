@@ -28,7 +28,7 @@
 </script>
 
 <div class="home-grid">
-    <img class="home-image" src="../../../public/images/elderly-man-watching-movie-cinema.jpg" alt="Man watching movie with popcorn">
+    <img class="home-image" src="../../../images/elderly-man-watching-movie-cinema.jpg" alt="Man watching movie with popcorn">
     <p class="home-moto">Great movies with everything you need!</p>
 </div>
 

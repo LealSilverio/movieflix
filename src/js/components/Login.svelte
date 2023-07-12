@@ -32,9 +32,14 @@
 
   init();
 
-  if ($userStore.isLoggedIn) {
-    alert('You are logged in!');
-  }
+  // function message() {
+  //   if ($userStore.isLoggedIn == true) {
+  //     alert('You are logged in!');
+  //   }
+  // }
+
+  // message();
+
 </script>
 
 <h1 class="login-title">Login Form</h1>
@@ -48,7 +53,7 @@
     <input id="password" name="password" type="password" bind:value={password} required/>
   </div>
   <div>
-    <button type="submit" disabled={loading}>
+    <button type="submit" disabled={loading}> <!-- I added onclick on:click|once={message} -->
       <span>{loading ? "Loading" : "LOGIN"}</span>
     </button>
     <p>Don't have an account?</p>
@@ -58,5 +63,8 @@
   </div>
   {#if errorMessage}
     <p>{errorMessage}</p>
+  {/if}
+  {#if $userStore.isLoggedIn}
+    {alert('You are logged in!')}
   {/if}
 </form>
