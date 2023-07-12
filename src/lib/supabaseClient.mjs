@@ -24,7 +24,7 @@ export async function login(user) {
         email: user.email,
         password: user.password
     });
-    if (data) userStore.set({ isLoggedIn: true, user: data.user });
+    if (data.session) userStore.set({ isLoggedIn: true, user: data.user });
     console.log(data);
     return { data, error };  
 }
