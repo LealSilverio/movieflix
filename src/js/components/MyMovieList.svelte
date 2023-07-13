@@ -50,9 +50,11 @@
 
     getData();
   }
+  else{
+    console.log("not logged in")
+    
+  }
 </script>
-
-<h2>My Movie List</h2>
 
 <!-- <form on:submit={handleSubmit}>
     <p>
@@ -67,17 +69,22 @@
 </form> -->
 <main>
   {#each $searchResults as movie}
-  <MyMovieCard {movie} />
+    <MyMovieCard {movie} />
   {/each}
+  {#if !$userStore.isLoggedIn}
+  <h2 id="signin_message">Please sign in to save movies!</h2>
+  {/if}
 </main>
 
-
 <style>
+  main {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
-main{
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
+  #signin_message{
+    font-size: 2.3em;
+    color: blue;    
+  }
 </style>
