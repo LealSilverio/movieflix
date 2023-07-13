@@ -1,6 +1,5 @@
 <script>
 import { movieId } from "../../lib/stores.mjs";
-  import MovieCard from "./MovieCard.svelte";
 
 export let movie; 
 console.log($movieId);
@@ -35,6 +34,5 @@ var imageURL = `https://image.tmdb.org/t/p/original${movie.poster_path}`;
                 <p>{movie.overview}</p>
                 <button id="add-to-favs">&#9825; Add to Favorites</button>
             </div>
-        </div>
-        
+        </div>     
 {/await}
