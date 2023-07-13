@@ -17,18 +17,17 @@
       profile = await getUserProfile(userId);
     }
 
-    async function handleSubmit(e) {
-      e.preventDefault();
-      const formData = new FormData(e.target);
-      const userProfile = {};
-      userProfile.website = formData.get("website"); //corresponds to name attribute on the form
-      userProfile.full_name = formData.get("full_name");
-      setUserProfile(userProfile, userId);
-    }
-    init();
-
+    // async function handleSubmit(e) {
+    //   e.preventDefault();
+    //   const formData = new FormData(e.target);
+    //   const userProfile = {};
+    //   userProfile.website = formData.get("website"); //corresponds to name attribute on the form
+    //   userProfile.full_name = formData.get("full_name");
+    //   setUserProfile(userProfile, userId);
+    // }
+    
     let userInput = "star wars";
-
+    
     async function getData() {
       console.log(userInput);
       const options = {
@@ -36,23 +35,23 @@
         headers: {
           accept: "application/json",
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmN2Q0ODg1ODhlYTI3Nzg2M2NlOGE2MjA3ZDFiNjY3NyIsInN1YiI6IjY0OWRmN2I0MDkxZTYyMDBhZDU0OGM4YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DPwW979vHfknWm16hkBASCL59yCxcA7lYR-dBHJnYpE",
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmN2Q0ODg1ODhlYTI3Nzg2M2NlOGE2MjA3ZDFiNjY3NyIsInN1YiI6IjY0OWRmN2I0MDkxZTYyMDBhZDU0OGM4YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DPwW979vHfknWm16hkBASCL59yCxcA7lYR-dBHJnYpE",
         },
       };
       await fetch(
         `https://api.themoviedb.org/3/search/movie?query=${userInput}`,
         options
-      )
+        )
         .then((response) => response.json())
         .then((response) => ($searchResults = response.results))
         .catch((err) => console.error(err));
-    }
-
-    getData();
+      }
+      
+      init();
+      getData();
   }
   else{
-    console.log("not logged in")
-    
+    console.log("not logged in") 
   }
 </script>
 
@@ -71,8 +70,10 @@
   {#each $searchResults as movie}
     <MyMovieCard {movie} />
   {/each}
+
+  
   {#if !$userStore.isLoggedIn}
-  <h2 id="signin_message">Please sign in to save movies!</h2>
+    <h2 id="signin_message">Please sign in to save movies!</h2>
   {/if}
 </main>
 
