@@ -33,7 +33,8 @@ var imageURL = `https://image.tmdb.org/t/p/original${movie.poster_path}`;
             <div>
                 <h3>{movie.title}</h3>
                 <p>{movie.overview}</p>
+                <button id="add-to-favs">&#9825; Add to Favorites</button>
             </div>
-            <button id="add-to-favs">&#9825; Add to Favorites</button>
         </div>
+        
 {/await}

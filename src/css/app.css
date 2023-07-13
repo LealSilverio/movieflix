@@ -207,21 +207,28 @@ button a {
 }
 
 /* MovieDetails page */
-#movie-details a{
+#movie-details {
+    display: flex;
+    align-content: center;
     padding: 20px 0;
 }
-#movie-details a div{
-    margin: 5% 0 0 5%;
+#movie-details div {
+    padding-left: 10%;
 }
-#movie-details a img{
-    width: 150px;
+#movie-details img {
+    width: 250px;
     height: auto;
 }
-#movie-details a h3, #movie-details a p {
+#movie-details h3 {
+    font-size: 2em;
+}
+#movie-details p {
     margin-top: 0;
     margin-bottom: 5px;
 }
-
+#add-to-favs {
+    margin-top: 5%;
+}
 
 /* MyMovies page */
 
