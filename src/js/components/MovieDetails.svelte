@@ -22,13 +22,12 @@ async function getMovie() {
 }
 let promise = getMovie();
 
-var imageURL = `https://image.tmdb.org/t/p/original${movie.poster_path}`;
 </script>
 {#await promise}
         Loading...
     {:then movie} 
         <div id="movie-details">
-            <img src={imageURL} alt={movie.title}>
+            <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title}>
             <div>
                 <h3>{movie.title}</h3>
                 <p>{movie.overview}</p>
