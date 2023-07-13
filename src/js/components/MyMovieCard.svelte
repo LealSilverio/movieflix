@@ -15,3 +15,23 @@
           </div>
       </a>
   </div>
+
+<style>
+
+    div{
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    img{
+        max-width: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+</style>
