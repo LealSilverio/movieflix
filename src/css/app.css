@@ -32,6 +32,10 @@ main {
     margin: 0 20%;
 }
 
+a {
+    text-decoration: none;
+    color: var(--black);
+}
 /* Header, navigation, search, footer */
 
 header, nav, .search, footer {
@@ -214,9 +218,28 @@ button a {
 }
 
 /* MovieDetails page */
-
-
-
+#movie-details {
+    display: flex;
+    align-content: center;
+    padding: 20px 0;
+}
+#movie-details div {
+    padding-left: 10%;
+}
+#movie-details img {
+    width: 250px;
+    height: auto;
+}
+#movie-details h3 {
+    font-size: 2em;
+}
+#movie-details p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+#add-to-favs {
+    margin-top: 5%;
+}
 
 /* MyMovies page */
 
@@ -224,20 +247,20 @@ button a {
 
 
 /* MovieCard (search results) */
-#movie-card {
+#movie-card a{
     display: flex;
     padding: 20px 0;
 }
-#movie-card div{
+#movie-card a div{
     display: flex;
     flex-direction: column;
     margin: 5% 0 0 5%;
 }
-#movie-card img{
+#movie-card a img{
     width: 150px;
     height: auto;
 }
-#movie-card h3, #movie-card p {
+#movie-card a h3, #movie-card a p {
     margin-top: 0;
     margin-bottom: 5px;
 }
