@@ -12,7 +12,7 @@
         e.preventDefault();
         const formData = new FormData(e.target)
         const userProfile = {};
-        userProfile.website = formData.get('website'); //corrosponds to name attrubte on the form
+        userProfile.website = formData.get('website'); //corresponds to name attribute on the form
         userProfile.full_name = formData.get('full_name');
         setUserProfile(userProfile, userId);
     };
