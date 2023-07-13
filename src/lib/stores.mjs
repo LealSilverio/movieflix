@@ -7,5 +7,3 @@ export const route = writable(window.location.hash || "#home");
 export const searchResults = writable([]);
 
 export const genreResults = writable([]);
-
-export const movieId = writable();

@@ -5,7 +5,7 @@
   import Login from './Login.svelte';
   import Home from './Home.svelte';
   import MovieCard from './MovieCard.svelte';
-  import { userStore, route, searchResults, genreResults, movieId } from '../../lib/stores.mjs';
+  import { userStore, route, searchResults, genreResults } from '../../lib/stores.mjs';
   import { checkLogin } from '../../lib/supabaseClient.mjs';
   import { onMount } from 'svelte';
   import MovieDetails from './MovieDetails.svelte';
@@ -30,7 +30,7 @@
   //   } else $route = document.location.hash;
   // };
 
-  // let movieId;
+  let movieId;
   onMount(init);
 
 </script>
@@ -56,8 +56,8 @@
     {#each $genreResults as movie}
     <MovieCard {movie} />
     {/each}
-    {:else if $route.includes("#movieDetails")}
-    <MovieDetails {$movieId}/>
+    {:else if $route == "#movieDetails"}
+    <MovieDetails />
     {/if}
   </div>
   

@@ -13,7 +13,7 @@ export async function signup(user) {
         email: user.email,
         password: user.password
     });
-    // console.log(data);
+    console.log(data);
     return { data, error };
 }
 
@@ -25,7 +25,7 @@ export async function login(user) {
         password: user.password
     });
     if (data) userStore.set({ isLoggedIn: true, user: data.user });
-    // console.log(data);
+    console.log(data);
     return { data, error };  
 }
 

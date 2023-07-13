@@ -18,7 +18,10 @@
         .then(response => response.json())
         .then(response => $genreResults = response.results)
         .catch(err => console.error(err));
+
+        console.log($genreResults);
     }
+
 </script>
 
 <a href="#genres" on:click={getMoviesByGenre}>{genre.name}</a>

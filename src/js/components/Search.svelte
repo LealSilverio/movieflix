@@ -4,7 +4,7 @@ import { searchResults } from "../../lib/stores.mjs";
 let userInput;
 
 async function getData() {
-    // console.log(userInput); 
+    console.log(userInput); 
     if (userInput != null)
     {
     const options = {

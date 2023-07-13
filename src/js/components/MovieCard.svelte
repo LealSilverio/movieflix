@@ -1,17 +1,13 @@
 <script>
   import MovieDetails from "./MovieDetails.svelte";
-  import { movieId } from "../../lib/stores.mjs";
 
 export let movie;
 console.log(movie);
-
 var imageURL = `https://image.tmdb.org/t/p/original${movie.poster_path}`
-
-$movieId = movie.id
 </script>
 
 <div id="movie-card">
-    <a href="#movieDetails?id={$movieId}">
+    <a href="#movieDetails">
         <img src={imageURL} alt={movie.title}>
         <div>
             <h3>{movie.title}</h3>
