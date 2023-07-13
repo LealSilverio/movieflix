@@ -19,7 +19,6 @@
         .then(response => genres = response.genres)
         .catch(err => console.error(err));
 
-        console.log(genres)
         return genres;
     }
 

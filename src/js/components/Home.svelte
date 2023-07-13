@@ -20,7 +20,7 @@
 
         popularMovies.length = 10;
 
-        console.log(popularMovies)
+        // console.log(popularMovies)
         return popularMovies;
     }
 

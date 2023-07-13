@@ -1,6 +1,6 @@
 <script>
-import MovieCard from "./MovieCard.svelte";
-
-// export let movieId;
-MovieCard
+import { movieId } from "../../lib/stores.mjs";
 </script>
+
+<p>Movie details!</p>
+<p>{$movieId}</p>
