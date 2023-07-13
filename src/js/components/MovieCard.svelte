@@ -1,4 +1,5 @@
 <script>
+
 import MovieDetails from "./MovieDetails.svelte";
 import { movieId } from "../../lib/stores.mjs";
 
