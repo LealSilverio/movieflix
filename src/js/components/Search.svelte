@@ -25,4 +25,4 @@ async function getData() {
 </script>
 
 <input id="search" name="searchBar" type="searchBar" bind:value={userInput}/>
-<button id="search-button" type="submit" on:click={getData}><span>&#x1F50D;&#xFE0E;</span></button>
+<a href="#search"><button id="search-button" type="submit" on:click={getData}><span>&#x1F50D;&#xFE0E;</span></button></a>
