@@ -57,13 +57,15 @@
     <MovieCard {movie} />
     {/each}
     {:else if $route.includes("#movieDetails")}
-    <MovieDetails movie={$movieId}/>
+    <MovieDetails />
+    {:else if $route == "#search"}
+    {#each $searchResults as movie}
+    <MovieCard {movie}/>
+    {/each}
     {/if}
+
   </div>
   
-  {#each $searchResults as movie}
-    <MovieCard {movie}/>
-  {/each}
 
   <!-- the movieId parameter is from the URL, like this: #details?id=movieId 
   The route is #details and the parameter is id=movieId-->

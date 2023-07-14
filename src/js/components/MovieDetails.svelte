@@ -1,10 +1,11 @@
 <script>
 import { movieId } from "../../lib/stores.mjs";
 
-export let movie; 
+let movie; 
 console.log($movieId);
 
 async function getMovie() {
+    
     const options = {
     method: 'GET',
     headers: {

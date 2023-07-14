@@ -4,13 +4,12 @@ import { movieId } from "../../lib/stores.mjs";
 
 export let movie;
 console.log(movie);
-$movieId = movie.id;
 
 var imageURL = `https://image.tmdb.org/t/p/original${movie.poster_path}`
 </script>
 
 <div id="movie-card">
-    <a href="#movieDetails?id={$movieId}">
+    <a href="#movieDetails?id={$movieId}" on:click={() => {$movieId = movie.id;}}>
         <img src={imageURL} alt={movie.title}>
         <div>
             <h3>{movie.title}</h3>
